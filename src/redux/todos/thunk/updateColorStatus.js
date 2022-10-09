@@ -1,6 +1,6 @@
-import { colorChanged } from './../../filters/actions';
+import { colorSelected } from '../actions';
 
-const updateStatus = (todoId, color) => {
+const updateColorStatus = (todoId, color) => {
   console.log(todoId, color);
   return async (dispatch) => {
     const response = await fetch(`http://localhost:9000/todos/${todoId}`, {
@@ -12,8 +12,8 @@ const updateStatus = (todoId, color) => {
     });
     const todo = await response.json();
 
-    dispatch(colorChanged());
+    dispatch(colorSelected(todo?.id, todo?.color));
   };
 };
 
-export default updateStatus;
+export default updateColorStatus;

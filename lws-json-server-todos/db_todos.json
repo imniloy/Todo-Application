@@ -4,13 +4,13 @@
       "id": 1,
       "text": "Learn Vanilla JavaScript",
       "completed": true,
-      "color": "yellow"
+      "color": "red"
     },
     {
       "id": 2,
       "text": "Learn Modern ES6+ JavaScript",
       "completed": true,
-      "color": "red"
+      "color": "green"
     },
     {
       "id": 3,
@@ -22,13 +22,13 @@
       "text": "Learn Redux Basics",
       "completed": true,
       "id": 4,
-      "color": "red"
+      "color": "yellow"
     },
     {
       "text": "Learn Redux fundamentals",
       "completed": true,
       "id": 5,
-      "color": "red"
+      "color": "green"
     },
     {
       "text": "learn Redux",
@@ -63,7 +63,8 @@
     {
       "id": 18,
       "text": "antu",
-      "completed": true
+      "completed": true,
+      "color": "green"
     },
     {
       "text": "mmmm",
