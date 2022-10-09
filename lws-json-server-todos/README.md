@@ -5,7 +5,7 @@ Example in memory todos api with json-server by Learn with Sumit
 # Installation
 
 ```bash
-git clone git@github.com:learnwithsumit/lws-json-server-todos.git
+git clone https://github.com/imniloy/Todo-Application.git
 cd lws-json-server-todos
 npm install json-server
 npm start
@@ -47,9 +47,3 @@ Delete todo (DELETE):
 DELETE http://localhost:3000/todos/1
 ```
 
-
-# Links
-
-- https://github.com/typicode/json-server
-- Jswon view Chrome plugin: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc
-- Learn with Sumit official website: htts://learnwithsumit.com
