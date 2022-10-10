@@ -3,10 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import fetchTodos from "../redux/todos/thunk/fetchTodos";
 import Todo from "./Todo";
 
-export default function TodoList() {
+
+
+export default function AllTodosList() {
     const todos = useSelector((state) => state.todos);
     const filters = useSelector((state) => state.filters);
     const dispatch = useDispatch();
+    let completedTodos;
+    let inCompletedTodos;
 
     useEffect(() => {
         dispatch(fetchTodos);
@@ -34,14 +38,36 @@ export default function TodoList() {
         return true;
     };
 
+    completedTodos = todos
+        .filter(filterByStatus)
+        .filter(filterByColors)
+        .map((todo) =>
+            todo?.completed && <Todo todo={todo} key={todo.id} />
+        )
+
+    inCompletedTodos = todos
+        .filter(filterByStatus)
+        .filter(filterByColors)
+        .map((todo) =>
+            !todo?.completed && <Todo todo={todo} key={todo.id} />
+        )
+
     return (
-        <div className="mt-2 text-gray-700 text-sm max-h-[300px] overflow-y-auto">
-            {todos
-                .filter(filterByStatus)
-                .filter(filterByColors)
-                .map((todo) => (
-                    <Todo todo={todo} key={todo.id} />
-                ))}
+        <div className="">
+            <div className="mt-2 text-gray-700 text-sm max-h-[200px] overflow-y-auto  space-y-3">
+                <div className="">
+                    {inCompletedTodos}
+                </div>
+            </div>
+
+            <h2 className="font-bold text-base text-gray-700 my-4">Completed Todos</h2>
+
+            <div className="mt-2 text-gray-700 text-sm max-h-[200px] overflow-y-auto  space-y-3">
+                <div className="mt-4">
+                    {completedTodos}
+                </div>
+            </div>
         </div>
+
     );
 }
