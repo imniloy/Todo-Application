@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": 2,
-      "text": "Learn Modern ES6+ JavaScript",
+      "text": "Learn Modern ES6+ JavaScript+ niloy",
       "completed": false,
       "color": "green"
     },
@@ -10,7 +10,7 @@
       "text": "Learn Redux fundamentals",
       "completed": false,
       "id": 5,
-      "color": "green"
+      "color": "red"
     },
     {
       "text": "learn Redux",
@@ -23,7 +23,7 @@
       "id": 7
     },
     {
-      "text": "Test",
+      "text": "TestGorila",
       "completed": false,
       "id": 8
     },
@@ -35,7 +35,8 @@
     {
       "id": 16,
       "text": "tttttttttttt",
-      "completed": true
+      "completed": true,
+      "color": "red"
     },
     {
       "id": 17,
@@ -53,8 +54,8 @@
       "id": 21
     },
     {
-      "text": "arpita",
-      "completed": true,
+      "text": "arpita + Niloy",
+      "completed": false,
       "id": 22
     },
     {
