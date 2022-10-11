@@ -54,19 +54,24 @@ export default function AllTodosList() {
 
     return (
         <div className="">
-            <div className="mt-2 text-gray-700 text-sm max-h-[200px] overflow-y-auto  space-y-3">
+            <div className="mt-4 text-gray-700 text-sm max-h-[200px] overflow-y-auto  space-y-3">
                 <div className="">
                     {inCompletedTodos}
                 </div>
             </div>
 
-            <h2 className="font-bold text-base text-gray-700 my-4">Completed Todos</h2>
+            {
+                (filters.status === 'Complete' || filters.status === 'All') &&
+                <>
+                    <h2 className="font-bold text-base text-gray-700 my-4">Completed Todos</h2>
 
-            <div className="mt-2 text-gray-700 text-sm max-h-[200px] overflow-y-auto  space-y-3">
-                <div className="mt-4">
-                    {completedTodos}
-                </div>
-            </div>
+                    <div className="mt-2 text-gray-700 text-sm max-h-[200px] overflow-y-auto  space-y-3">
+                        <div className="mt-4">
+                            {completedTodos}
+                        </div>
+                    </div>
+                </>
+            }
         </div>
 
     );
